@@ -1,7 +1,7 @@
 This code draws specific (x, y) pixel. So it's very small on a real screen.
 Usually I make drawing by circles as following:
 
-```
+```C
 void draw(jint stride, void *pixels, u_int32_t x, u_int32_t y, u_int32_t color, u_int32_t width) {
     for (jint yy = -width; yy <= width; yy++) {
         for (jint xx = -width; xx <= width; xx++) {
@@ -24,7 +24,7 @@ For example:
 
 Add one more function to manage drawing an array of ints(pixles):
 
-```
+```C
 void draw_array(void *pixels, jint stride, jint *points_array, jint length, jint width, jint color) {
     jint *pixels_array = (jint *) pixels;
     for (jint i = 0; i < length; i++) {
